@@ -1,0 +1,10 @@
+//TODO:
+3 Basic HTML Pages [x]
+Client sends correct headers to server []
+Set up Mongo DB database []
+Set up Model and Model Controller []
+Return Authentication code from server []
+Make sure Client can log in now []
+CSS all over that bitch []
+Host on a remote server []
+https://www.youtube.com/watch?v=E1ir7_s_VTw

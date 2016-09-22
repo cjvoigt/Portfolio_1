@@ -1,0 +1,32 @@
+<DOCTYPE! html>
+<html>
+<head>
+  <title>Create Account</title>
+  <script src="/scripts/createAccount.js"></script>
+  <script src="/scripts/cookiesHelpers.js"></script>
+</head>
+<body>
+  <form id="createAccount" name="createAccount">
+    <fieldset id="createAccountFS">
+      <legend>Create Account</legend>
+      <p>
+        <label for="email">Enter an email:</label>
+        <input id="email" type="text" name="email"/>
+      </p>
+      <p>
+        <label for="username">Enter a username: </label>
+        <input id="username" type="text" name="username"/>
+      </p>
+      <p>
+        <label for="password1">Enter a password: </label>
+        <input id="password" type="text" name="password"/>
+      </p>
+      <p>
+        <label for="password2">Reenter your password: </label>
+        <input id="password2" type="text"/>
+      </p>
+      <input id="finishButton" type="button" value="Finish" onClick="postFormData();" />
+    </fieldset>
+  </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="/scripts/login.js"></script>
+	<script src="/scripts/cookiesHelpers.js"></script>
+</head>
+<body>
+	<form id="loginForm" name="loginForm">
+		<fieldset id="login">
+			<legend>Login</legend>
+			<p>
+				<label for="username">Username: </label>
+				<input type="text" name="username" size=24>
+			</p>
+			<p>
+				<label for="password">Password: </label>
+				<input type="password" name="password" size=24><br>
+			</p>
+			<input type="button" value="Sign in" onClick="postFormData();">
+			<input type="button" value="Create Account" onClick="goToCreateAccount();">
+		</fieldset>
+	</form>
+</body>
+</html>
