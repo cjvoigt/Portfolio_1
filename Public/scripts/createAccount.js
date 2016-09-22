@@ -5,7 +5,7 @@ function finishButtonTapped() {
 }
 
 function validateForm() {
-  
+  //Changes
 }
 
 function postFormData() {
