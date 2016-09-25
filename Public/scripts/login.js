@@ -15,5 +15,5 @@ function postFormData() {
 }
 
 function goToCreateAccount() {
-  window.location.href = "http://localhost:8080/create/account";
+  window.location.href = "http://localhost:8080/users/create";
 }

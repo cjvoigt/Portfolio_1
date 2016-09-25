@@ -1,12 +1,27 @@
 function finishButtonTapped() {
-  validateForm();
-  postFormData();
-  goToCreateAccount();
+  if(validateFormInput()) {
+    postFormData();
+    goToCreateAccount();
+  } else {
+
+  }
 }
 
-function validateForm() {
-  //Changes
-  //Another Change
+function validateFormInput() {
+  var email = document.forms["createAccount"]["email"].value;
+  var name =  document.forms["createAccount"]["username"].value;
+  var password1 = document.forms["createAccount"]["password"].value;
+  var password2 = document.forms["createAccount"]["password2"].value;
+
+  if(password1 != password2) {
+    return false;
+  } else if(stringMatchesForm(createEmailFormString(email))){
+    return false;
+  } else if(!isStringAlphaNumeric(name)) {
+    return false;
+  }
+
+  return true;
 }
 
 function postFormData() {
@@ -17,16 +32,16 @@ function postFormData() {
   }
 
   setCookie("username", document.forms["createAccount"]["username"].value, 2);
-  setCookie("username", document.forms["createAccount"]["email"].value, 2)
+  setCookie("email", document.forms["createAccount"]["email"].value, 2)
 
   $.ajax({
-    url:"http://localhost:8080/create/account",
+    url:"http://localhost:8080/users/create",
     type:'post',
     contentType: 'application/json',
     data: JSON.stringify(data)
   });
 }
 
-function goToCreateAccount() {
-  window.location.href = "http://localhost:8080/create/account";
+function goToLogin() {
+  window.location.href = "http://localhost:8080/login";
 }
